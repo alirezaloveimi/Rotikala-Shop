@@ -1,0 +1,74 @@
+/* import Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* import custom style */
+@import url("./style.css");
+
+/* import taliwind styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-normal;
+    font-weight: bold;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
+}
+
+/* some custom utilities classes */
+@layer utilities {
+  .flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .flex-align-center {
+    display: flex;
+    align-items: center;
+  }
+  .flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-center {
+    display: grid;
+    place-content: center;
+  }
+}
+
+@layer components {
+  .container-fluid {
+    @apply w-full px-4 mx-auto;
+  }
+}
